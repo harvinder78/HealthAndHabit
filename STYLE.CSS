@@ -1,0 +1,270 @@
+:root {
+  --bg-color: #f9fafb;
+  --card-color: #ffffff;
+  --text-color: #1f2937;
+  --subtext-color: #6b7280;
+  --border-color: #e5e7eb;
+  --button-green: #22c55e;
+  --button-red: #ef4444;
+}
+
+body.dark {
+  --bg-color: #111827;
+  --card-color: #1f2937;
+  --text-color: #f9fafb;
+  --subtext-color: #9ca3af;
+  --border-color: #374151;
+  --button-green: #16a34a;
+  --button-red: #dc2626;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 420px;
+  width: 100%;
+  background: var(--card-color);
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--subtext-color);
+}
+.toggle-theme {
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  background: var(--border-color);
+  color: var(--text-color);
+  transition: all 0.3s;
+}
+.date-box {
+  display: flex;
+  align-items: center;
+  background: var(--bg-color);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  gap: 6px;
+}
+
+.date-box span {
+  font-weight: 500;
+}
+.date-box i {
+  font-size: 1.3rem;
+}
+.streak-counter {
+  text-align: right;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e67e22;
+  margin: 5px 0 15px;
+}
+.cls{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Habits */
+.habit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: var(--bg-color);
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+.habit span {
+  font-size: 1rem;
+  flex: 1;
+}
+
+.habit-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.habit-actions input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #f44336;
+  font-weight: bold;
+}
+
+.add-habit {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.add-habit input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--card-color);
+  color: var(--text-color);
+}
+
+.add-habit button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--button-green);
+  color: white;
+  cursor: pointer;
+}
+.stats {
+  margin-top: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.stat-box {
+  background: var(--bg-color);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-box label {
+  font-size: 0.9rem;
+  color: var(--subtext-color);
+  margin-bottom: 8px;
+}
+
+.counter {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.buttons-inline {
+  display: flex;
+  gap: 6px;
+}
+
+.plus-btn,
+.minus-btn {
+  background: var(--border-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: px;
+  width: 28px;
+  height: 28px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.progress {
+  margin: 15px 0;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: linear-gradient(to right, #4caf50, #2196f3);
+  width: 0%;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.buttons button {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.save-btn {
+  background: #4caf50;
+}
+
+.reset-btn {
+  background: #f44336;
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.clear-btn{
+  padding: 8px;
+  background: var(--border-color);
+  font-size: 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 6px;
+}
+
+@media (max-width: 500px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

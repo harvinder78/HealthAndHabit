@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesonal Health & Habbit Tracker App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div>
+          <div class="title">Health & Habit Tracker</div>
+          <div class="subtitle" id="quoteBox">Small steps every day</div>
+        </div>
+        <div class="date-box">
+          <i class="ri-calendar-2-fill"></i> <span id="todayDate">8/30/2025</span>
+        </div>
+        <button class="toggle-theme" id="themeToggle">🌙</button>
+      </div>
+      <div class="cls">
+        <h3>Daily Habits</h3>
+        <div id="streakCounter" class="streak-counter">🔥 Streak: 0 days</div>
+      </div>
+
+      <div id="habitList">
+        <div class="habit"><span>Meditation</span>
+          <div class="habit-actions">
+            <input type="checkbox">
+            <button class="delete-btn" onclick="deleteHabit(this)">X</button>
+          </div>
+        </div>
+        <div class="habit"><span>Workout</span>
+          <div class="habit-actions">
+            <input type="checkbox">
+            <button class="delete-btn" onclick="deleteHabit(this)">X</button>
+          </div>
+        </div>
+        <div class="habit"><span>Reading</span>
+          <div class="habit-actions">
+            <input type="checkbox">
+            <button class="delete-btn" onclick="deleteHabit(this)">X</button>
+          </div>
+        </div>
+        <div class="habit"><span>Healthy Meal</span>
+          <div class="habit-actions">
+            <input type="checkbox">
+            <button class="delete-btn" onclick="deleteHabit(this)">X</button>
+          </div>
+        </div>
+      </div>
+      <div class="add-habit">
+        <input type="text" id="new-habit" placeholder="Add Habit">
+        <button onclick="addHabit()">Add</button>
+      </div>
+  
+
+      <div class="stats">
+        <h3>Health Stats</h3>
+        <div class="stats-grid">
+          <div class="stat-box">
+            <label>Water Intake</label>
+            <div class="counter" id="waterCount">0 </div>
+            <div class="buttons-inline">
+              <button class="minus-btn" onclick="decrementStat('waterCount')">-</button>
+              <button class="plus-btn" onclick="incrementStat('waterCount')">+</button>
+            </div>
+          </div>
+          <div class="stat-box">
+            <label>Sleep Hours</label>
+            <div class="counter" id="sleepCount">0</div>
+            <div class="buttons-inline">
+              <button class="minus-btn" onclick="decrementStat('sleepCount')">-</button>
+              <button class="plus-btn" onclick="incrementStat('sleepCount')">+</button>
+            </div>
+          </div>
+          <div class="stat-box">
+            <label>Exercise (min)</label>
+            <div class="counter" id="exerciseCount">0</div>
+            <div class="buttons-inline">
+              <button class="minus-btn" onclick="decrementStat('exerciseCount')">-</button>
+              <button class="plus-btn" onclick="incrementStat('exerciseCount')">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="progress"><div id="progressBar" class="progress-bar"></div></div>
+  
+      <div class="buttons">
+        <button class="save-btn" onclick="saveDay()">Save Today</button>
+        <button class="reset-btn" onclick="resetDay()">Reset Day</button>
+      </div>
+      <div class="history">
+        <div class="head">
+          <h3>History</h3>
+          <div onclick="clearHistory()" class=clear-btn>Clear History</div>
+        </div>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Habits</th>
+              <th>Water</th>
+              <th>Sleep</th>
+              <th>Exercise</th>
+            </tr>
+          </thead>
+          <tbody id="historyTable"></tbody>
+        </table>
+      </div>
+      
+    </div>
+    <script src="SCRIPT.JS"></script>
+  </body>
+</html>
